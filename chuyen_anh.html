@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow CSS</title>
+  <style>
+    .slideshow {
+      width: 600px;
+      height: 600px;
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #000;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%; /* 3 ảnh => 300% */
+      animation: slide 6s linear infinite;
+    }
+
+    .slide {
+      width: 100%;
+      flex: 1;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); } /* Lặp lại */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slideshow">
+    <div class="slides">
+      <img class="slide" src="img/177c0dd6b43d0b63522c.jpg" alt="Slide 1">
+      <img class="slide" src="img/3001.jpg" alt="Slide 2">
+      <img class="slide" src="img/177c0dd6b43d0b63522c.jpg" alt="Slide 3">
+    </div>
+  </div>
+
+</body>
+</html>
